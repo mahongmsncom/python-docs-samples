@@ -107,12 +107,19 @@ if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
     # Running on production App Engine, so connect to Google Cloud SQL using
     # the unix socket at /cloudsql/<your-cloudsql-connection string>
     DATABASES = {
-        'default': {
+        'default_google': {
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '/cloudsql/<your-cloudsql-connection-string>',
             'NAME': 'polls',
             'USER': '<your-database-user>',
             'PASSWORD': '<your-database-password>',
+        },
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': 'remotemysql.com',
+            'NAME': 'cKHe4iTaDk',
+            'USER': 'cKHe4iTaDk',
+            'PASSWORD': 'THJcs6fK1S',
         }
     }
 else:
@@ -125,11 +132,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '127.0.0.1',
+            'HOST': 'remotemysql.com',
             'PORT': '3306',
-            'NAME': 'polls',
-            'USER': '<your-database-user>',
-            'PASSWORD': '<your-database-password>',
+            'NAME': 'cKHe4iTaDk',
+            'USER': 'cKHe4iTaDk',
+            'PASSWORD': 'THJcs6fK1S',
         }
     }
 # [END db_setup]
