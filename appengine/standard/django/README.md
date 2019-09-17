@@ -34,3 +34,4 @@ See our [Running Django in the App Engine Standard Environment](https://cloud.go
 - gcloud config configurations list
 - gcloud config configurations activate mh001
 - gcloud info
+- gcloud app deploy
