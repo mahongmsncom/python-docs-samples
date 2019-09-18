@@ -39,5 +39,5 @@ builtins:
 - django_wsgi: true
 - remote_api: true
 
-automatic_scaling:
-  max_concurrent_requests: 1
+manual_scaling:
+  instances: 5
